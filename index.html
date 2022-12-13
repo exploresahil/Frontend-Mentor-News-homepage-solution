@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <header class="flex flex-jc-sb flex-ai-ctr">
+      <img src="./assets/images/logo.svg" alt="W logo" />
+      <nav>
+        <button id="menu-close">
+          <img
+            src="./assets/images/icon-menu-close.svg"
+            alt="menu close button"
+          />
+        </button>
+        <ul class="flex flex-fd-col">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>New</li></a>
+          <a href="#"><li>Popular</li></a>
+          <a href="#"><li>Trending</li></a>
+          <a href="#"><li>Categories</li></a>
+        </ul>
+      </nav>
+      <div class="menu-button" id="menu-button">
+        <button>
+          <img src="./assets/images/icon-menu.svg" alt="hamburger menu icon" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="hero-container flex flex-fd-col">
+        <div class="hero flex flex-fd-col">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/image-web-3-desktop.jpg"
+            />
+            <img
+              src="./assets/images/image-web-3-mobile.jpg"
+              alt="abstract composition 3D isometric geometric shapes"
+            />
+          </picture>
+          <div class="hero-text flex flex-fd-col">
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div class="hero-text-button flex flex-fd-col">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button><a href="#">Read more</a></button>
+            </div>
+          </div>
+        </div>
+        <aside class="flex flex-fd-col">
+          <h2>New</h2>
+          <article class="flex flex-fd-col">
+            <h3>Hydrogen VS Electric Cars</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+          <article class="flex flex-fd-col">
+            <h3>The Downsides of AI Artistry</h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </article>
+          <article class="flex flex-fd-col">
+            <h3>Is VC Funding Drying Up?</h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means
+            </p>
+          </article>
+        </aside>
+      </div>
+      <div class="featured-container flex flex-fd-col">
+        <div class="featured flex">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="xyz" />
+          <div class="featured-text flex flex-fd-col flex-jc-sb">
+            <h2>01</h2>
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="featured flex">
+          <img src="./assets/images/image-top-laptops.jpg" alt="xyz" />
+          <div class="featured-text flex flex-fd-col flex-jc-sb">
+            <h2>02</h2>
+            <h3>Top 10 Laptops of 2022</h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="featured flex">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="xyz" />
+          <div class="featured-text flex flex-fd-col flex-jc-sb">
+            <h2>03</h2>
+            <h3>The Growth of Gaming</h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Home New Popular Trending Categories The Bright Future of Web 3.0? We dive
+    into the next evolution of the web that claims to put the power of the
+    platforms back into the hands of the people. But is it really fulfilling its
+      promise? Read more New Hydrogen VS Electric Cars Will hydrogen-fueled cars
+      ever catch up to EVs? The Downsides of AI Artistry What are the possible
+    adverse effects of on-demand AI image generation? Is VC Funding Drying Up?
+    Private funding by VC firms is down 50% YOY. We take a look at what that
+    means. 01 Reviving Retro PCs What happens when old PCs are given modern
+    upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and
+    budgets. 03 The Growth of Gaming How the pandemic has sparked fresh
+    opportunities. -->
+    <script src="./dist/script.js"></script>
+  </body>
+</html>

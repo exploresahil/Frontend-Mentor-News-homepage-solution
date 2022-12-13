@@ -1,0 +1,333 @@
+@use 'variables' as v;
+@use 'globals' as g;
+
+//*--------------------> Body
+
+body {
+    background-color: v.$n-ow;
+    padding: 1em 1.08em;
+    color: v.$n-vdb;
+}
+
+p {
+    color: v.$n-dgb;
+}
+
+//*--------------------> Header
+
+header {
+    height: 3.5em;
+
+    img {
+        height: 1.9em;
+    }
+
+    .menu-button {
+        cursor: pointer;
+        button {
+            background: none;
+            border: none;
+            display: flex;
+            background: transparent;
+            outline: none;
+            cursor: pointer;
+
+            img {
+                height: 1.3em;
+            }
+        }
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 68vw;
+        height: 100vh;
+        padding: 9.6em 0 0 1.5em;
+        opacity: 0;
+        transform: translateX(68vw);
+        transition: transform 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+        background-color: white;
+        box-shadow: 1px 0px 0px 1px rgba(0, 0, 0, 0);
+
+        #menu-close {
+            background: transparent;
+            border: none;
+            outline: none;
+            position: absolute;
+            right: 1.6em;
+            top: 2em;
+            z-index: 99999;
+            cursor: pointer;
+
+            img {
+                height: 2rem;
+            }
+        }
+
+        ul {
+            gap: 1.8em;
+
+            a {
+                
+                font-size: 1.15rem;
+                cursor: pointer;  
+                color: v.$n-vdb;
+
+                &:hover {
+                    color: v.$p-sr;
+                }
+            }
+        }
+    }
+}
+
+.open {
+    opacity: 1;
+    transform: translateX(0);
+    box-shadow: -200px 0px 0px 1px rgba(0, 0, 0, 0.451);
+}
+
+main {
+    .hero-container {
+        gap: 4.2em;
+        margin-top: 1.3em;
+
+        .hero {
+            
+
+            .hero-text {
+                margin-top: 1.2em;
+                gap: 1.2em;
+
+                h1 {
+                    width: 90%;
+                    font-size: 2.7rem;
+                    line-height: 1;
+                    font-weight: 800;
+                }
+                
+                .hero-text-button {
+                    gap: 1.1em;
+                
+                    p {
+                        line-height: 1.76;
+                    }
+
+                    button {
+                        margin-top: .5em;
+                        width: 185px;
+                        padding: 1.2em 0;
+                        height: auto;
+                        background-color: v.$p-sr;
+                        border: none;
+                        transition: background-color 150ms ease-in-out;
+
+                            &:hover {
+                                background-color: v.$n-vdb;
+                        }
+
+                        a {
+                            text-transform: uppercase;
+                            color: white;
+                            font-weight: 700;
+                            letter-spacing: 5px;
+                        } 
+                    }
+                }
+            }
+
+            picture {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        aside {
+            gap: 2em;
+            padding: 1.4em 1.4em;
+            background-color: v.$n-vdb;
+            color: white;
+
+            h2 {
+                color: v.$p-so;
+                font-size: 2.1em;
+            }
+
+            article {
+                padding-bottom: 2em;
+                gap: .4em;
+                border-bottom: 1px solid white;
+
+                &:nth-of-type(3) {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+
+                h3 {
+                font-size: 1.35rem;
+                cursor: pointer;
+                transition: color 150ms ease-in-out;
+
+                &:hover, &:active {
+                    color: v.$p-so;
+                }
+                }
+
+                p {
+                    line-height: 1.8;
+                }
+            }
+        }
+    }
+    
+    .featured-container {
+        margin-top: 4.6em;
+        gap: 2em;
+
+        .featured {
+            gap: 1.5em;
+
+            img {
+                width: 100px;
+            }
+
+            .featured-text {
+                h2 {
+                    font-size: 2em;
+                    color: v.$n-gb;
+                    cursor: pointer;
+                }
+
+                h3 {
+                    cursor: pointer;
+                    transition: color 150ms ease-in-out;
+
+                    &:hover, &:active {
+                        color: v.$p-sr;
+                    }
+                }
+
+                p {
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 5.5em 11.5vw;
+    }
+
+    header {
+        img {
+            height: 2.7em;
+        }
+
+        nav {
+            position: relative;
+            top: auto;
+            right: auto;
+            width: auto;
+            height: auto;
+            padding: 0;
+            opacity: 1;
+            transform: translateX(0);
+
+            button {
+                display: none;
+            }
+
+            ul {
+                flex-direction: row !important;
+                gap: 2.45em;
+                
+                a {
+                    color: v.$n-dgb;
+                    font-size: 1.09rem;
+                }
+            }
+        }
+        
+        .menu-button {
+            display: none;
+        }
+    }
+
+    main {
+        .hero-container {
+            margin-top: 3.2em;
+            gap: 2em;
+            flex-direction: row !important;
+
+            .hero {
+                margin-top: 0;
+                gap: 2em;
+                width: 50.7vw;
+
+                picture {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .hero-text {
+                    flex-direction: row;
+                    margin: 0;
+                    gap: 0;
+
+                    h1 {
+                        width: 55vw;
+                        max-width: 55vw;
+                        font-size: 3.75rem;
+                        font-weight: 800;
+                    }
+
+                    .hero-text-button {
+                        justify-content: space-between;
+                        width: 50vw;
+                        height: 180px;
+
+                        p {
+                            line-height: 1.6;
+                        }
+
+                        button {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            
+            aside {
+                margin: 0;
+                padding: 2em 1.65em;
+
+                h2 {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+
+        .featured-container {
+            flex-direction: row;
+            
+            .featured {
+                width: 500px;
+
+                .featured-text {
+                    h3 {
+                        font-size: 1.23rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

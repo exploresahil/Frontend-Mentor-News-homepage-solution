@@ -1,0 +1,2 @@
+const navbar=document.querySelector("nav"),openMenu=document.querySelector(".menu-button"),closeMenu=document.querySelector("#menu-close");openMenu.addEventListener("click",(()=>{navbar.classList.add("open")})),closeMenu.addEventListener("click",(()=>{navbar.classList.remove("open")}));
+//# sourceMappingURL=script.js.map
